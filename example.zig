@@ -32,6 +32,7 @@ const Worker = struct {
 
     pub fn stop(self: Worker) !void {
         try self.c.send(null);
+        self.t.join();
     }
 
     fn run(name: []const u8, c: chan.Chan(Request)) void {

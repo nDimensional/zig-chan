@@ -23,5 +23,5 @@ pub fn build(b: *std.Build) void {
     example.root_module.addImport("chan", chan);
 
     const example_run_artifact = b.addRunArtifact(example);
-    b.step("example", "Run the example").dependOn(&example_run_artifact.step);
+    b.step("run", "Run the example").dependOn(&example_run_artifact.step);
 }
