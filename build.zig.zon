@@ -1,0 +1,11 @@
+.{
+    .name = "zig-chan",
+    .version = "0.0.1",
+    .paths = .{ "build.zig", "build.zig.zon", "src" },
+    .dependencies = .{
+        .chan = .{
+            .url = "https://github.com/tylertreat/chan/archive/refs/tags/0.0.4.tar.gz",
+            .hash = "1220d1fd854802c37648073c9da0015ca5d69121e7b7e7205c64e346664a49d67da6",
+        },
+    },
+}
